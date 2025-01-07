@@ -1,0 +1,11 @@
+include: package:mylib01/my_analysis01.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    camel_case_types: false
+
+    # must_be_immutable: true
+    # unnecessary_overrides: false
+    # depend_on_referenced_packages: false
+    # slash_for_doc_comments: false

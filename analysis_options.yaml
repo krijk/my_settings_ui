@@ -1,0 +1,14 @@
+include: package:mylib01/my_analysis01.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    camel_case_types: false
+    avoid_positional_boolean_parameters: false
+    avoid_redundant_argument_values: false
+    prefer_constructors_over_static_methods: false
+
+    # must_be_immutable: true
+    # unnecessary_overrides: false
+    # depend_on_referenced_packages: false
+    # slash_for_doc_comments: false
