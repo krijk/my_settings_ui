@@ -135,7 +135,7 @@ class AndroidSettingsTile extends StatelessWidget {
                   child: Switch.adaptive(
                     value: initialValue,
                     onChanged: onToggle,
-                    activeColor: enabled
+                    activeThumbColor: enabled
                         ? activeSwitchColor
                         : theme.themeData.inactiveTitleColor,
                   ),
