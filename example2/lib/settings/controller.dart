@@ -38,7 +38,8 @@ enum PrefKey {
           key,
         );
       case PrefKey.brightness:
-        return BrightnessEx.getEnumByName(await Pref.getString(key, initialBrightness.name));
+        final String strBrightness = await Pref.getString(key, initialBrightness.name);
+        return BrightnessEx.getEnumByName(strBrightness);
       case PrefKey.color:
         final String colorCode = await Pref.getString(key, initialColor.toHex(withAlpha: true));
         return Color(int.parse(colorCode, radix: 16));
@@ -107,13 +108,14 @@ extension BrightnessEx on Brightness {
   }
 
   /// Get enum by its name
+  /// the name could be 'system'
   static Brightness? getEnumByName(String name) {
     for (final Brightness e in Brightness.values) {
       if (e.name == name) {
         return e;
       }
     }
-    return null;
+    return Brightness.dark;
   }
 }
 
@@ -220,18 +222,20 @@ class SettingsController with ChangeNotifier {
     final double lineOrigin = await PrefKey.lineOrigin.preference;
     final double lineThickness = await PrefKey.lineThickness.preference;
     final bool roundedCorners = await PrefKey.roundedCorners.preference;
+    final TextDirection textDirection = await PrefKey.textDirection.preference;
     final bool filterCapital = await PrefKey.filterCapital.preference;
 
     final SettingsState state = SettingsState();
     _state = state.copyWith(
       animateExpansions: animateExpansions,
-      brightness: brightness,
+      // brightness: brightness,
       color: color,
       indent: indent,
       indentType: indentType,
       lineOrigin: lineOrigin,
       lineThickness: lineThickness,
       roundedCorners: roundedCorners,
+      textDirection: textDirection,
       filterCapital: filterCapital,
     );
   }
@@ -262,13 +266,11 @@ class SettingsController with ChangeNotifier {
   }
 
   void restoreTheme() {
-    debugPrint('DebugSA restoreTheme()');
     restoreThemeCommon();
     restoreThemeTree();
   }
 
   void restoreThemeCommon() {
-    debugPrint('DebugSA restoreThemeCommon()');
     state = state.copyWith(
       color: initialColor,
     );
@@ -276,7 +278,6 @@ class SettingsController with ChangeNotifier {
   }
 
   void restoreThemeTree() {
-    debugPrint('DebugSA restoreThemeTree()');
     state = state.copyWith(
       animateExpansions: initialAnimateExpressions,
       brightness: initialBrightness,
