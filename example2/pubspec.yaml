@@ -1,7 +1,7 @@
 name: example2
 description: "A new Flutter project."
 publish_to: 'none'
-version: 0.1.0
+version: 0.2.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_fancy_tree_view: ^1.4.1
-  flutter_riverpod: ^2.6.1
+  flutter_riverpod: ^3.0.0
   my_settings_ui:
     path: ../
   mylib01:

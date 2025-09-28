@@ -1,6 +1,6 @@
 name: my_settings_ui
 description: Create native settings for Flutter app in minutes. Use single interfaces to build
-version: 0.0.2
+version: 0.1.0
 homepage: https://github.com/yako-dev/flutter-settings-ui
 publish_to: none
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.6.1
+  flutter_riverpod: ^3.0.0
   mylib01:
     git:
       url: https://github.com/krijk/mylib01.git
