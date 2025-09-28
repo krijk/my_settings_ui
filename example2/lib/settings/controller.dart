@@ -228,7 +228,7 @@ class SettingsController with ChangeNotifier {
     final SettingsState state = SettingsState();
     _state = state.copyWith(
       animateExpansions: animateExpansions,
-      // brightness: brightness,
+      brightness: brightness,
       color: color,
       indent: indent,
       indentType: indentType,
