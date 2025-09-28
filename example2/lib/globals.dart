@@ -1,6 +1,6 @@
 // ignore_for_file: always_specify_types
 import 'package:example2/src/searcher.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 
 import '/settings/controller.dart';
 import 'contents/selection.dart';
