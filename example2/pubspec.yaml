@@ -1,22 +1,28 @@
 name: example2
 description: "A new Flutter project."
 publish_to: 'none'
-version: 0.2.0
+version: 0.3.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
+  cupertino_ui: any
   faker: ^2.1.0
   flutter:
     sdk: flutter
   flutter_fancy_tree_view: ^1.4.1
   flutter_riverpod: ^3.0.0
+  material_ui: any
   my_settings_ui:
     path: ../
   mylib01:
     git:
       url: https://github.com/krijk/mylib01.git
+
+#dependency_overrides:
+#  mylib01:
+#    path: ../../mylib01/
 
 dev_dependencies:
   flutter_lints: ^3.0.0

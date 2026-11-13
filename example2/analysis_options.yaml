@@ -1,3 +1,8 @@
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - linux/**
 include: package:mylib01/my_analysis01.yaml
 
 linter:

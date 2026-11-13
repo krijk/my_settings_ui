@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import '/src/sections/abstract_settings_section.dart';
 import '/src/sections/platforms/android_settings_section.dart';
 import '/src/sections/platforms/ios_settings_section.dart';

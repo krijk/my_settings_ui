@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
+
 import '/src/tiles/abstract_settings_tile.dart';
 import '/src/tiles/platforms/android_settings_tile.dart';
 import '/src/tiles/platforms/ios_settings_tile.dart';

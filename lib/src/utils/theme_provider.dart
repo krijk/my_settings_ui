@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import '/src/utils/platform_utils.dart';
 import '/src/utils/settings_theme.dart';
 

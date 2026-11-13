@@ -1,6 +1,6 @@
 /// https://dart.dev/samples#interfaces-and-abstract-classes
 library;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mylib01/lib.dart';
 import 'page_base.dart';
 
@@ -18,7 +18,7 @@ abstract class PageStateless extends PageBase {
         child: Column(
           children: <Widget>[
             Flexible(
-              child: UI.textArea(test(), height * paramWidth, height * paramHeight),
+              child: UI.textArea(test(), width: height * paramWidth, height: height * paramHeight),
             ),
             controlsHorizontal(context),
           ],
@@ -35,7 +35,7 @@ abstract class PageStateless extends PageBase {
     return Column(
       children: <Widget>[
         Expanded(
-          child: UI.textArea(test(), width * paramWidth, height * paramHeight),
+          child: UI.textArea(test(), width: width * paramWidth, height: height * paramHeight),
         ),
         controlsVertical(context),
       ],

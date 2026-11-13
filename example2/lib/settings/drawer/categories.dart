@@ -1,5 +1,5 @@
 import 'package:example2/globals.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:my_settings_ui/my_settings_ui.dart';
 
 import '/src/navigation.dart';

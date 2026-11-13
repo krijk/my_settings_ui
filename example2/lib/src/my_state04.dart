@@ -1,5 +1,5 @@
 // ignore_for_file: avoid_setters_without_getters
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mylib01/lib.dart';
 
 /// My stateful state base
@@ -19,7 +19,7 @@ class MyWidgetStateBase04<T> extends State {
         child: Column(
           children: <Widget>[
             Expanded(
-              child: UI.textArea(text, width * paramWidth, height * paramHeight),
+              child: UI.textArea(text, width: width * paramWidth, height: height * paramHeight),
             ),
             controlsHorizontal(context),
           ],
@@ -35,7 +35,7 @@ class MyWidgetStateBase04<T> extends State {
     return Row(
       children: <Widget>[
         Expanded(
-          child: UI.textArea(text, height * paramWidth, height * paramHeight),
+          child: UI.textArea(text, width: height * paramWidth, height: height * paramHeight),
         ),
         controlsVertical(context),
       ],

@@ -2,8 +2,8 @@
 
 import 'package:faker/faker.dart' show Faker;
 import 'package:faker/src/lorem.dart' show Lorem;
-import 'package:flutter/material.dart';
 import 'package:flutter_fancy_tree_view/flutter_fancy_tree_view.dart';
+import 'package:material_ui/material_ui.dart';
 
 class Node {
   Node({
